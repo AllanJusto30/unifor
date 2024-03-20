@@ -93,10 +93,62 @@ Algoritmo ConverteCelsiusFarenheit:
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
 O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
 
+#### Fluxograma
+```mermaid
+flowchart TD
+A[Receber números e operador] --> B{Operador é válido?}; B -->|Sim| C[Calcular resultado]; B -->|Não| D[Mensagem de erro]; C --> E[Retornar resultado]; D --> F[Retornar mensagem de erro]
+F & E-->G([FIM])
+```
+
+
+#### Pseudocódigo 
+```
+ALGORITIMO_CALCULADORA
+Cálculo de função (operador, num1, num2)
+    se operador == '+'
+       
+        retorna num1 + num2
+    senão se operador == '-'
+        retorna num1 - num2
+    senão se operador == '*'
+        retorna num1 * num2
+    senão se operador == '/'
+       
+        Se num2 == 0
+            Retorna "Erro: Divisão por zero".
+        Se não
+            Retorna número 1/número 2
+    Se não
+        retorna "operador inválido"
+
+Função principal
+
+    //Recebe o número e operadora enviado pelo usuário
+    Escreva "Por favor, insira o primeiro número:".
+    Leia o número 1
+    Escreva "Por favor, insira o segundo número:".
+    por favor leia o número 2
+    Escreva "operadores de entrada (+, -, , /):".
+    operador de leitura
+    
+    //Resultado do cálculo
+    resultado = cálculo(operador, num1, num2)
+    
+    //mostra o resultado
+    "Resultado da operação:", descreva o resultado
+FIM
+```
+
+#### Teste de mesa 
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+
+### Exercício 04 
+Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
+
 #### Fluxograma 
-
-
-
 
 
 
