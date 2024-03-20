@@ -68,7 +68,7 @@ G --> F
 ```
 
 #### Pseudocódigo 
-ALGORITMO_Celsius_Fahrenheit 
+ALGORITMO CONVERTER_CElCIUS_FARENHEIT:
 DECLARE Celsius, Fahrenheit NUMÉRICO
 
 
@@ -78,9 +78,8 @@ Leia em Celsius
 Fahrenheit = (9/5) * Celsius + 32
 
 Escreva "A temperatura Fahrenheit (F) é" em graus Fahrenheit.
+
 FIM_ALGORITMO
-```
-Algoritmo ConverteCelsiusFarenheit:
 ```
 #### Teste de mesa 
 
