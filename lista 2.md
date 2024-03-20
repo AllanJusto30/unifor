@@ -149,7 +149,46 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 
 #### Fluxograma 
 
+```mermaid
+flowchart TD
+A([inicio])--> B{{Solicitar idade do usuário }}
+ B-->Idade --> VerificarIdade{Verificar idade}
+    VerificarIdade -->|Idade >= 5 e idade <= 7| CategoriaInfantilA[Infantil A]
+    VerificarIdade -->|Idade >= 8 e idade <= 10| CategoriaInfantilB[Infantil B]
+    VerificarIdade -->|Idade >= 11 e idade <= 13| CategoriaJuvenilA[Juvenil A]
+    VerificarIdade -->|Idade >= 14 e idade <= 17| CategoriaJuvenilB[Juvenil B]
+    VerificarIdade -->|Idade > 18| CategoriaAdulto[Adulto]
+    VerificarIdade -->|Idade inválida| IdadeInvalida[Idade inválida]
+```
 
 
+#### Pseudocódigo 
 
+```
+ALGORITIMO VERIFICAR_IDADE
+Início
+    // Solicitar a idade do usuário
+    Ler idade
+    
+    // Verificar em qual categoria a idade se encaixa
+    Se idade >= 5 e idade <= 7 então
+        Escrever "Categoria: Infantil A"
+    Senão Se idade >= 8 e idade <= 10 então
+        Escrever "Categoria: Infantil B"
+    Senão Se idade >= 11 e idade <= 13 então
+        Escrever "Categoria: Juvenil A"
+    Senão Se idade >= 14 e idade <= 17 então
+        Escrever "Categoria: Juvenil B"
+    Senão Se idade > 18 então
+        Escrever "Categoria: Adulto"
+    Senão
+        Escrever "Idade inválida"
+Fim
+```
 
+#### Teste de mesa (0.5 ponto)
+
+| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+|      --      |      --      |      --      |      --      |      --      | 
+| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
