@@ -1,5 +1,6 @@
 # UNIFOR
-**Nome**:
+**Nome**: Allan Justo de Freitas
+**Professor**: Carubbi
 **Disciplina**: Raciocínio lógico algorítmico
 
 ## Lista de exercícios 01
