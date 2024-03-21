@@ -45,7 +45,7 @@ I --> Z
 13 FIM
 ```
 
-#### Teste de mesa (0,25 ponto)
+#### Teste de mesa 
 | numero | numero >= 0 | resto | resto == 0 | Saída |
 | -- | -- | -- | -- | -- | 
 | -1 | F |   |   | "O número deve ser postivo!" |
@@ -86,13 +86,13 @@ A([INICIO]) --> B[\salário \]
         ESCREVA "Novo salário:", salario_novo
     FIM ALGORITMO
 ```
-
+```
 #### Teste de mesa 
 | salário atual | | salário <=500 | novo salário | saída | 
 |     450       |      não     |      450* 1,2    |     540   | 
 |     800       |      sim     |      800* 1,6    |     880   |
 |     600       |      sim     |      600*1,6     |     660   |
-
+```
 
 ## Exercício 03 
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
