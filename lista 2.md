@@ -95,7 +95,11 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 #### Fluxograma
 ```mermaid
 flowchart TD
-A[Receber números e operador] --> B{Operador é válido?}; B -->|Sim| C[Calcular resultado]; B -->|Não| D[Mensagem de erro]; C --> E[Retornar resultado]; D --> F[Retornar mensagem de erro]
+A([Receber números e operador])--> B{Operador é válido?};
+ B -->|Sim| C{{Calcular resultado}}; 
+ B -->|Não| D{{Mensagem de erro}}; 
+ C --> E[Retornar resultado]; 
+ D --> F[Retornar mensagem de erro]
 F & E-->G([FIM])
 ```
 
