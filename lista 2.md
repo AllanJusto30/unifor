@@ -92,7 +92,7 @@ FIM_ALGORITMO
 ### Exercício 03 
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
 O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
-```
+
 #### Fluxograma
 ```mermaid
 flowchart TD
@@ -151,10 +151,10 @@ FIM_ALGORITIMO
 
 ### Exercício 04 
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
-```
+
 #### Fluxograma 
-mermaid
-flowchart TD
+```Mermaid
+Flowchart TD
 A([inicio])--> B[\ idade do usuário \]
  B-->Idade --> VerificarIdade{Verificar idade}
     VerificarIdade -->|Idade >= 5 e idade <= 7| 
@@ -168,7 +168,7 @@ A([inicio])--> B[\ idade do usuário \]
     VerificarIdade -->|Idade > 18| 
     CategoriaAdulto[Adulto]
     VerificarIdade -->|Idade inválida| IdadeInvalida[Idade inválida]
-
+```
 
 #### Pseudocódigo 
 ```
