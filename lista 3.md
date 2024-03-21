@@ -11,15 +11,14 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 ```mermaid
 flowchart TD
 A([inicio])--> 
-   Entrada(Entrada)
+   Entrada[\Entrada\]
     Entrada --> Verifica_Positivo{numero >= 0}
     Verifica_Positivo -->|Sim| Verifica_Par_Impar{numero % 2 == 0}
     Verifica_Positivo -->|Não| Nova_Entrada[Digite um número inteiro e positivo]
     Nova_Entrada --> Entrada
-    Verifica_Par_Impar -->|Sim| Par[O número é par]
-    Verifica_Par_Impar -->|Não| Impar[O número é ímpar]
-    Par --> Fim(Fim)
-    Impar --> Fim
+    Verifica_Par_Impar -->|Sim| Par{{O número é par}}
+    Verifica_Par_Impar -->|Não| impar{{O número é ímpar}}
+    Par & impar--> Fim([Fim])
 ```
 
 #### Pseudocódigo 
@@ -45,30 +44,30 @@ Algoritmo Verifica_Par_Impar
         Escreva("O número ", numero, " é ímpar.")
     FIM_ALGORITIMO
 
-  #### Teste de mesa
-```
-nome_coluna1	nome_coluna2	nome_coluna3	nome_coluna4	nome_coluna5
-Adicionar	espaço	se quiser	alinhar	como barras
-verticais,	mas	não é	obrigatório.	Entendeu?
+#### Teste de mesa
+|Entrada| positivo| nova entrada |positivo |	verificar impar/par | 
+|  -3	  |   não   |	    8       |  sim    |   par               |
+|   9   |	sim	|      --      |	sim    |   impar             |
 ```
 
 ### Exercício 02
-
 ### Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
-````
+
+```
 #### Fluxograma
-```mermaid
+Mermaid
 flowchart TD
 A([INICIO]) --> B{{Inicializar contador = 0}}
 B--LOOP-->C[enquanto contador<=30]
- C--> D{Se contador % 3 == 0}
- D-->E[Verdadeiro] 
-  D-->F[falso] 
+C--> D{Se contador % 3 == 0}
+D-->E[Verdadeiro] 
+D-->F[falso] 
 E-->I(Exibir Contador)
 I-->H([FIM])
 F-->G[incrementar contador]
 G--LOOP-->D
 ```
+
 #### Pseudocódigo
 ```
 ALGORITIMO_MULTIPLOS_DE_3
@@ -80,11 +79,11 @@ ENQUANTO contador <= 30 FAÇA
     FIM SE
     contador = contador + 1  // Incrementar o contador
 FIM ENQUANTO
-
 FIM_ALGORITIMO
+```
 
 ````
-#### Teste de mesa (0.5 ponto)
+#### Teste de mesa 
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
@@ -96,26 +95,24 @@ FIM_ALGORITIMO
 Dada uma sequência de números inteiros, calcular a sua soma. 
 Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrever o número 35.
 
-#### Fluxograma 
 ```
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([INICIO]) --> definir_sequencia[Definir a sequência de números inteiros]
-    definir_sequencia --> inicializar_soma[Inicializar soma = 0]
-    inicializar_soma --> loop[Para cada número na sequência]
-    loop --> adicionar_numero{Adicionar número à soma?}
-    adicionar_numero --> |Sim| adicionar[Adicionar número à soma]
-    adicionar_numero --> |Não| proximo_numero[Próximo número na sequência]
-    adicionar --> atualizar_soma[Atualizar valor da soma]
+A([inicio])-->B[\Definir a sequência de números inteiros\]
+    B--> C[Inicializar soma = 0]
+    C --loop-->D[[Para cada número na sequência]]
+    D--> E[\Adicionar número à soma?\]
+    E-->|Sim| adicionar[Adicionar número à soma]
+    E--> |Não| proximo_numero[Próximo número na sequência]
+    adicionar --> atualizar_soma{{Atualizar valor da soma}}
     atualizar_soma --> proximo_numero
     proximo_numero --> verificar_fim{Todos os números verificados?}
     verificar_fim --> |Não| loop
     verificar_fim --> |Sim| exibir_soma[Exibir soma total]
     exibir_soma --> fim([FIM])
-```
 
-#### Pseudocódigo (1.0 ponto)
+#### Pseudocódigo 
 ```
 AlGORITIMO_SOMA_NÚMEROS_INTEIROS
 // Definir a sequência de números inteiros
@@ -134,10 +131,10 @@ FIM_ALGORITMO
 ```
 #### Teste de mesa
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| número | número II | número III | número IV | número V |  soma total |
+|0 + (12)|  12+ (17) |  29+(4)    |  29-(6)   | 27+(8)   |   35        |
+| --     | --        | --         |  --       |  --      |
+| --     | --        | --         | --        | --       |        
 
 
 ### Exercício 04
@@ -145,19 +142,18 @@ Escreva um programa que leia a nota de diversos alunos, até que seja digitada u
 Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas notas foram lidas. 
 Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
-#### Fluxograma 
-```mermaid
+#### Fluxograma
+````Mermaid
 flowchart TD
-A([INICIO]) -->  ler_nota[Ler a primeira nota]
+A([INICIO])--> ler_nota[\Ler a primeira nota\]
     ler_nota --> nota_negativa{Nota é negativa?}
     nota_negativa --> |Não| somar[Somar nota à soma total e contar o número de notas lidas]
     somar --> ler_nova_nota[Ler uma nova nota]
     ler_nova_nota --> nota_negativa
     nota_negativa --> |Sim| calcular_media[Calcular média aritmética]
-    calcular_media --> exibir_resultado[Exibir o número de notas lidas e a média aritmética=6,75]
-    exibir_resultado --> fim[FIM]
-```
-
+    calcular_media --> exibir_resultado{{Exibir o número de notas lidas e a média aritmética=6,75}}
+    exibir_resultado --> fim([FIM])
+    ```
 #### pseudocódigo
 ```
 ALGORITIMO_VARIÁVEIS 
@@ -187,7 +183,7 @@ FIM
 ```
 
 #### Teste de mesa 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| n1  | nota negativa | n lidas | n2  | nota negativa   | n2 lidas  | n3 | nota negativa| n3 lidas| Média |
+|  8  |   não         |      1  |   7  |      não      |   2        | 6  |     -1       | 3       | 8+7+6= 21|
+                                                                                                  |21/3= 7|
+
