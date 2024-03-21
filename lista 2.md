@@ -135,7 +135,7 @@ Função principal
     
     //mostra o resultado
     "Resultado da operação:", descreva o resultado
-FIM
+FIM_ALGORITIMO
 ```
 
 #### Teste de mesa 
@@ -183,7 +183,7 @@ Início
         Escrever "Categoria: Adulto"
     Senão
         Escrever "Idade inválida"
-Fim
+FIM_ALGORITIMO
 ```
 
 #### Teste de mesa (0.5 ponto)
