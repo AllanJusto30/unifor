@@ -14,9 +14,9 @@ Calcule a média de quatro números inteiros dados.
 ```mermaid
 flowchart TD
 A([INICIO]) --> B{{Digite o primeiro número inteiro}}
-    B --> C[Digite o segundo número inteiro]
-    C --> D[Digite o terceiro número inteiro]
-    D --> E[Digite o quarto número inteiro]
+    B --> C[\Digite o segundo número inteiro\]
+    C --> D[\Digite o terceiro número inteir\]
+    D --> E[\Digite o quarto número inteiro\]
     E --> F{Calcular média}
     F --> G[Exibir média]
     G --> H([FIM_ALGORITMO])
@@ -44,24 +44,24 @@ media = (num1 + num2 + num3 + num4) / 4
 ESCREVA "A média dos quatro números é:", media
 FIM_ALGORITMO
 ```
-
+```
 #### Teste de mesa
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| primeiro número | segundo número | terceiro número | quarto numero  |     Média |    | Média final |
+|       --        |       --       |        --       |      --        |      --        |             |
+|       50        |       35       |        10       |      8         | (50+35+10+8/4) |     25,7    |
+|       --        |       --       |         --      |      --        |      --        |             |
 
 ### Exercício 02 
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
-
+```
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{digite a temperatura em Celsius }}
+A([INICIO]) --> B[\digite a temperatura em Celsius\]
 B --> C{Temperatura em Celsius}
-C -- Sim --> D{{Calcular Fahrenheit F = 9/5 * C + 32}}
-D --> E[Exibir temperatura em Fahrenheit]
+C -- Sim --> D[Calcular Fahrenheit F = 9/5 * C + 32]
+D --> E{{Exibir temperatura em Fahrenheit}}
 E --> F([FIM])
 C -- Não --> G[Exibir mensagem de erro] 
 G --> F
@@ -83,10 +83,10 @@ FIM_ALGORITMO
 ```
 #### Teste de mesa 
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| temp (C) |            cacular p/ (F)            | Temp (F) |
+|    --    | (9/5) * Celsius + 32                 |    --    |   
+|    20°C  | F = (9/5) * 20 + 32 = 36 + 32 = 68°F |    68°F  |
+|    38°C  | F = (9/5) * 38 + 32 = 36 + 32 = 100°F|   100°F  |
 
 ```
 ### Exercício 03 
@@ -96,10 +96,10 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 #### Fluxograma
 ```mermaid
 flowchart TD
-A([Receber números e operador])--> B{Operador é válido?};
- B -->|Sim| C{{Calcular resultado}}; 
- B -->|Não| D{{Mensagem de erro}}; 
- C --> E[Retornar resultado]; 
+A[\números e operador\]--> B{Operador é válido?}
+ B -->|Sim| C[Calcular resultado]
+ B -->|Não| D[Mensagem de erro]
+ C --> E{{Retornar resultado}}
  D --> F[Retornar mensagem de erro]
 F & E
 -->G([FIM])
@@ -142,33 +142,35 @@ Função principal
     "Resultado da operação:", descreva o resultado
 FIM_ALGORITIMO
 ```
-
+```
 #### Teste de mesa 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| Números | operação | operador válido | Resultado |  
+|   --    |     --   |      --         |    --     |   
+|   5     | adição   |      sim        |    15     |
+|   10    | adição   |      sim        |    --     |
 
 ### Exercício 04 
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
-
-#### Fluxograma 
-
-```mermaid
-flowchart TD
-A([inicio])--> B{{Solicitar idade do usuário }}
- B-->Idade --> VerificarIdade{Verificar idade}
-    VerificarIdade -->|Idade >= 5 e idade <= 7| CategoriaInfantilA[Infantil A]
-    VerificarIdade -->|Idade >= 8 e idade <= 10| CategoriaInfantilB[Infantil B]
-    VerificarIdade -->|Idade >= 11 e idade <= 13| CategoriaJuvenilA[Juvenil A]
-    VerificarIdade -->|Idade >= 14 e idade <= 17| CategoriaJuvenilB[Juvenil B]
-    VerificarIdade -->|Idade > 18| CategoriaAdulto[Adulto]
-    VerificarIdade -->|Idade inválida| IdadeInvalida[Idade inválida]
 ```
+#### Fluxograma 
+mermaid
+flowchart TD
+A([inicio])--> B[\ idade do usuário \]
+ B-->Idade --> VerificarIdade{Verificar idade}
+    VerificarIdade -->|Idade >= 5 e idade <= 7| 
+    CategoriaInfantilA[Infantil A]
+    VerificarIdade -->|Idade >= 8 e idade <= 10| 
+    CategoriaInfantilB[Infantil B]
+    VerificarIdade -->|Idade >= 11 e idade <= 13| 
+    CategoriaJuvenilA[Juvenil A]
+    VerificarIdade -->|Idade >= 14 e idade <= 17| 
+    CategoriaJuvenilB[Juvenil B]
+    VerificarIdade -->|Idade > 18| 
+    CategoriaAdulto[Adulto]
+    VerificarIdade -->|Idade inválida| IdadeInvalida[Idade inválida]
 
 
 #### Pseudocódigo 
-
 ```
 ALGORITIMO VERIFICAR_IDADE
 Início
@@ -190,10 +192,12 @@ Início
         Escrever "Idade inválida"
 FIM_ALGORITIMO
 ```
+```
+#### Teste de mesa
 
-#### Teste de mesa (0.5 ponto)
-
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| Idade |     verificar idade     | Infantil A   | Infantil B | Juvenil A | Juvenil B | Adulto  |
+|   21  |Idade >= 5 e idade <= 7  |    não       |     não    |     não   |     não   |   sim   |
+|   9   |Idade >= 8 e idade <= 10 |    não       |     sim    |     não   |     não   |   não   |
+|   14  |Idade >= 14 e idade <= 17|    não       |     não    |     não   |     sim   |   não   |
+|   --  |      Idade > 18         |    não       |     não    |     não   |     não   |   não   |
+```
