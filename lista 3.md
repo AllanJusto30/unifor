@@ -53,9 +53,10 @@ Algoritmo Verifica_Par_Impar
 ### Exercício 02
 ### Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
 
-```
 #### Fluxograma
-Mermaid
+
+```mermaid
+
 flowchart TD
 A([INICIO]) --> B{{Inicializar contador = 0}}
 B--LOOP-->C[enquanto contador<=30]
@@ -69,6 +70,7 @@ G--LOOP-->D
 ```
 
 #### Pseudocódigo
+
 ```
 ALGORITIMO_MULTIPLOS_DE_3
 contador = 0  // Inicialize o contador
@@ -80,11 +82,12 @@ ENQUANTO contador <= 30 FAÇA
     contador = contador + 1  // Incrementar o contador
 FIM ENQUANTO
 FIM_ALGORITIMO
+
 ```
+#### Teste de mesa
 
-````
-#### Teste de mesa 
-
+```
+ 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
@@ -95,7 +98,7 @@ FIM_ALGORITIMO
 Dada uma sequência de números inteiros, calcular a sua soma. 
 Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrever o número 35.
 
-```
+
 #### Fluxograma
 ```mermaid
 flowchart TD
@@ -111,7 +114,7 @@ A([inicio])-->B[\Definir a sequência de números inteiros\]
     verificar_fim --> |Não| loop
     verificar_fim --> |Sim| exibir_soma[Exibir soma total]
     exibir_soma --> fim([FIM])
-
+```
 #### Pseudocódigo 
 ```
 AlGORITIMO_SOMA_NÚMEROS_INTEIROS
@@ -130,12 +133,12 @@ EXIBIR soma
 FIM_ALGORITMO
 ```
 #### Teste de mesa
-
+```
 | número | número II | número III | número IV | número V |  soma total |
 |0 + (12)|  12+ (17) |  29+(4)    |  29-(6)   | 27+(8)   |   35        |
 | --     | --        | --         |  --       |  --      |
 | --     | --        | --         | --        | --       |        
-
+```
 
 ### Exercício 04
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
@@ -143,7 +146,7 @@ Nesse momento, ele mostra a média aritmética de todas as notas lidas e quantas
 Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
 #### Fluxograma
-````Mermaid
+```mermaid
 flowchart TD
 A([INICIO])--> ler_nota[\Ler a primeira nota\]
     ler_nota --> nota_negativa{Nota é negativa?}
@@ -153,7 +156,7 @@ A([INICIO])--> ler_nota[\Ler a primeira nota\]
     nota_negativa --> |Sim| calcular_media[Calcular média aritmética]
     calcular_media --> exibir_resultado{{Exibir o número de notas lidas e a média aritmética=6,75}}
     exibir_resultado --> fim([FIM])
-    ```
+```
 #### pseudocódigo
 ```
 ALGORITIMO_VARIÁVEIS 
