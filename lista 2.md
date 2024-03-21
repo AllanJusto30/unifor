@@ -94,14 +94,15 @@ Receba dois números reais e um operador e efetue a operação correspondente co
 O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
 ```
 #### Fluxograma
-```Mermaid
+```mermaid
 flowchart TD
 A([Receber números e operador])--> B{Operador é válido?};
  B -->|Sim| C{{Calcular resultado}}; 
  B -->|Não| D{{Mensagem de erro}}; 
  C --> E[Retornar resultado]; 
  D --> F[Retornar mensagem de erro]
-F & E-->G([FIM])
+F & E
+-->G([FIM])
 ```
 
 #### Pseudocódigo 
